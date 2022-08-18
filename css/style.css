@@ -1,47 +1,79 @@
+
+#main-doc{
+    grid-template-areas: 
+          
+    "navbar"
+    "sec";
+}
+
+#navbar{
+    grid-area: navbar;
+    display: flex;
+    flex-direction: column;
+
+}
+
+header{
+    font-size: large;
+    font-weight: 600;
+}
+
+#navbar *{
+    margin: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid gray;
+    color: rgb(18, 18, 18);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#sec_cover{
+    grid-area: sec;
+    overflow-y: scroll;
+
+}
+#Introduction{
+    grid-area: Introduction;
+}
+
+#What_you_should_already_know{
+    grid-area: What_you_should_already_know;
+}
+
+#JavaScript_and_Java{
+    grid-area: JavaScript_and_Java;
+}
+
+#Hello_world{
+    grid-area: Hello_world;
+}
+
+#Variables{
+    grid-area: Variables;
+}
+
+
 @media only screen and (min-width: 600px ) {
-    body {
-      background-color: lightblue;
-      
+    #main-doc {
+        display: grid;
+        grid-template-areas: 
+          "navbar sec "
+          "navbar sec "
+          "navbar sec"
+          "navbar sec"
+          "navbar sec";
+        grid-template-rows: 1fr;  
+        grid-template-columns:20% 1fr;
+        grid-row-gap: 20px;
+        grid-column-gap: 20px;
+        height: 100vh;
+        margin: 0;
+        overflow: scroll;
+    }
+
+    #sec_cover{
+        border-left: 1px solid gray;
+        padding-left: 30px;
+        
     }
 }
-
-main {
-    width: 100vw;
-    height: 100vh;
-
-    font-family: 'Quicksand', sans-serif;
-    font-weight: bold;
-    font-size: 20px;
-
-
-    display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 50px 1fr 1fr 1fr 1fr 100px;
-
-    gap: 10px;
-    box-sizing: border-box;
-}
-
-#section-1{
-    grid-column-start: 1;
-    grid-column-end : 2;
-}
-
-#section-2{
-    grid-column-start: 2;
-    grid-column-end : 4;
-
-
-}
-
-#navbar {
-    position: fixed;
-    width: 100%;
-    text-align: center;
-    z-index: 1;
-    background-color: darkgrey;
-    margin: auto;
-
-}
-

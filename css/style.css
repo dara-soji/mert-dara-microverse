@@ -1,0 +1,47 @@
+@media only screen and (min-width: 600px ) {
+    body {
+      background-color: lightblue;
+      
+    }
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 50px 1fr 1fr 1fr 1fr 100px;
+
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+#section-1{
+    grid-column-start: 1;
+    grid-column-end : 2;
+}
+
+#section-2{
+    grid-column-start: 2;
+    grid-column-end : 4;
+
+
+}
+
+#navbar {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+    background-color: darkgrey;
+    margin: auto;
+
+}
+
